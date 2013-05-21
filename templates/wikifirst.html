@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MY-WIKI</title>
+		<link type="text/css" rel = "stylesheet" href="/static/style.css"/>
+	</head>
+	<body>
+		<div style="position:absolute;right:1000px;width:1px;height:800px;background-color: #87CEEB;float:left;"></div>
+		<div style="position:absolute;left:1000px;width:1px;height:800px;background-color: #87CEEB;float:right;"></div>
+		<h2>WELCOME TO <img style="position:absolute;right:500px;top:0px"src="/static/mywiki.png" height="80px" width="150px"></h2>
+		<img src="/static/wiki.png" height="100px" style="position:absolute;right:1050px;top:10px"><img>
+		<h3 style="position:absolute;right:1070px;top:100px;color:GRAY;">MYWIKI</h3>
+		{% if name %}
+		{%if url=="" %}
+		<a class ="login-link" href="/_edit">edit</a>
+		{% else %}
+		<a class ="login-link" href="{{url}}">edit</a>
+		{% endif %}
+		<span class="login-link">({{name}})|</span>
+		<a class="login-link" href="/logout">logout</a>
+		{% else %}
+		<a class ="login-link" href="/login">login</a>
+		<span class="login-link">|</span>
+		<a class ="login-link" href="/signup">signup</a>
+		<div id="content">
+		{% endif %}
+		{% block content %}
+		{% endblock %}
+		</div>
+	</body>
+
+</html>

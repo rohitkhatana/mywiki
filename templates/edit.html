@@ -1,0 +1,16 @@
+{% extends "wikifirst.html" %}
+{% block content %}
+<form method="post">
+{% if data %}
+<textarea name="content" height="300px">{{data.content}}</textarea><br>
+<div class="error">{{error}}</div>
+<button>SAVE</button>
+<button>CANCEL</button>
+{% elif name %}
+<textarea name="content" height="300px"></textarea><br>
+<div class="error">{{error}}</div>
+<button>SAVE</button>
+<button>CANCEL</button>
+{% endif %}
+</form>
+{% endblock %}

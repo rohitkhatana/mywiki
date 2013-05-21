@@ -1,0 +1,43 @@
+	{% extends "wikifirst.html" %}
+	{% block content %}
+	<!doctype html>
+	<html>
+		<head>
+		 <title>UNIT2_SIGNUP</title>
+		 <style type="text\css">
+			body{
+				front-family: sans-serif; width: 800px; margin: 0 auto; padding: 10px;
+			}
+			.label {text-align: right}
+			.error {color: blue}
+		 </style>
+		</head>
+		<body >
+            <form method="post">
+			<table>
+				<tr>
+					<td style="color:BLUE">USERNAME</td>
+					<td><input name="username" type="text" value="{{username}}"></td>
+					<td class="error">{{usname_error}}</td>
+				<tr>
+					<td style="color:RED">PASSWORD</td>
+					<td><input name="password" type="password" value=""></td>
+					<td style="color:blue">{{pass_error}}</td>
+				<tr>
+					<td style="color:49A66C">VERIFY PASSWORD</td>
+					<td><input name="verify" type="password" value=""></td>
+					<td class="error">{{ver_error}}</td>
+				<tr>
+					<td style="color:green">E-MAIL </td>
+					<td><input name="email" type="text" value="{{email}}"></td>
+					<td class="error">{{mail_error}}</td>
+			</table>
+            <br>
+           
+            <br>
+            <input type="submit">
+
+        </form>
+	</body>
+    </html>
+{% endblock %}

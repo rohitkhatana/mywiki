@@ -1,0 +1,60 @@
+
+{% extends "wikifirst.html" %}
+{% block content %}
+<!doctype html>
+<html>
+	<head>
+		<title>Login</title>
+		<style type="text/css">
+			body{
+				font-family:Helvetica, Arial, sans-serif; width:800px;padding: 20px;margin: 0 auto;font-size: 14px;
+			}
+			.usname{
+				color:gray;
+				text-decoration: none;
+			}
+			input[type=submit]{
+				color:gray;
+				margin: 0 0 0 3cm;
+				position:absolute;
+				top:8.5cm;
+				left:11.5cm;
+			}
+			.error{
+				color:red;font-size=20px;
+				position:absolute;
+				top:7.56cm;
+				left:11.63cm;
+				margin: 0 0 0 2cm
+			}
+			.main-title {
+				display: block;
+				color: #222;
+				position:relative;
+				top:3cm;
+				left:2.5cm;
+				font-size: 40px;
+				font-weight: bold;
+				margin-bottom: 4cm;
+				text-decoration: none;
+				margin-left:5cm;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<form method="post">
+		<div style="width:1px;height:400px;background-color:black;float:left;"></div>
+		<div style="width:1px;height:400px;background-color:black;float:right;"></div>
+		<div class="main-title">POST-IT</div>
+		<table style="margin:4cm 2cm 0.5cm 3cm">
+			<tr><td class="usname">Username</td><td><input type="text" value="" name="username"></td>
+			<tr><td class="usname">Password</td><td><input type="password" value="" name="password"></td>
+		</table>
+		<div class="error">{{error}}</div>
+		<div><input type="submit"></div>
+		
+		</form>
+	</body>
+</html>
+{% endblock %}

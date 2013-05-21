@@ -1,0 +1,28 @@
+body{
+	 position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: black;
+}
+.h2{
+	position:relative;
+	left:3cm;
+	right:2cm;
+}
+.login-link{
+	color: gray;
+	text-decoration: none;
+	position: relative;
+	left: 800px;
+	bottom: 30px;
+}
+textarea{
+			height:450px; width:500px
+			}
+.error{
+	color:red;
+}
